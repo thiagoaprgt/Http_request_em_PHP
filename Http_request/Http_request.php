@@ -3,20 +3,26 @@
 
     class Http_request {
 
-        public function  http_get_Request() {
+        public function  http_get_Request(string $url, array $array) {
 
             // o padrão dos verbos HTTP no curl é GET
 
 
             $ch = curl_init();
 
-            curl_setopt($ch, CURLOPT_URL, $url); // configura a 
+            $data = http_build_query($array);
+
+            $url = $url . "?" . $data;            
+
+            curl_setopt($ch, CURLOPT_URL, $url); // configura a url 
             
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // envia os dados
 
-            $result = curl_exec($ch);     // executa e retorna uma reposta
-        
-            curl_close($ch);     
+            $result = curl_exec($ch);     // executa e retorna uma reposta    
+            
+            curl_close($ch); 
+            
+            return $result;   
 
         }
 
