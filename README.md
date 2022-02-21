@@ -10,7 +10,7 @@
 
  <?php
 
-    require_once "Http/Http.php";
+    require_once "Http/Http_request.php";
     
     $url = "http://localhost/teste/php/api.php";
 
