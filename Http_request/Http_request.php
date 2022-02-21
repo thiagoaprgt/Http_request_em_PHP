@@ -18,6 +18,8 @@
 
             curl_setopt($ch, CURLOPT_URL, $url); // configura a url 
             
+            curl_setopt($ch, CURLINFO_HEADER_OUT, true); // habilita a possibilidade monitorar o header enviado através da função curl_getinfo()
+            
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // envia os dados
 
             if(!empty($headers)) {
@@ -48,6 +50,8 @@
             curl_setopt($ch, CURLOPT_URL, $url); // configura a url
         
             curl_setopt($ch, CURLOPT_POST, true); // configura o verbo http post
+            
+            curl_setopt($ch, CURLINFO_HEADER_OUT, true); // habilita a possibilidade monitorar o header enviado através da função curl_getinfo()
         
             $post_data = http_build_query($array);              
         
