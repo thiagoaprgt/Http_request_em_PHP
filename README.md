@@ -43,3 +43,5 @@
             echo "<br>----- http header ------ <br><br><br>";
 
     echo $result["output"];
+
+?>
