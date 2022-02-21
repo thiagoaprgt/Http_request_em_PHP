@@ -4,7 +4,7 @@
  
  #Exemplo como monitorar o cabeçalho HTTP que foi enviado:
  
- >";
+`
 
  <?php
 
@@ -46,3 +46,5 @@
     echo $result["output"];
 
 ?>
+
+```
