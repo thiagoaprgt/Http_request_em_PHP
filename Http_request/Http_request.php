@@ -1,6 +1,5 @@
 <?php   
 
-    namespace library;
 
     class Http {
 
