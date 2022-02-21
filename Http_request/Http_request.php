@@ -4,7 +4,7 @@
 
     class Http {
 
-        public function  http_get_Request(string $url, array $array, array $headers = []) {
+        public function  get(string $url, array $array, array $headers = []) {
 
             // o padrão dos verbos HTTP no curl é GET
 
@@ -43,7 +43,7 @@
         }
 
 
-        public function http_post_Request(string $url, array $array, array $headers = []) {
+        public function post(string $url, array $array, array $headers = []) {
             
                    
             $ch = curl_init();
@@ -82,11 +82,11 @@
             
         }
 
-        public function http_put_Request() {}
+        public function put() {}
 
-        public function http_patch_Request() {}
+        public function patch() {}
 
-        public function http_delete_Request() {}
+        public function delete() {}
 
     }
 
