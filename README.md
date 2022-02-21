@@ -34,18 +34,21 @@
     $result = $http->post($url, $parameters, $headers);
 
     echo "<pre>";
-
             
 
-            echo "<br>----- http header ------<br><br>";
+    echo "<br>----- http header ------<br><br>";
 
-            $info = curl_getinfo($result["curlHandle"])["request_header"];
+    $info = curl_getinfo($result["curlHandle"])["request_header"];
 
-            print_r($info);
+    print_r($info);
 
-            echo "<br>----- http header ------ <br><br><br>";
+    echo "<br>----- http header ------ <br><br><br>";
 
     echo $result["output"];
+    
+        
+    echo "</pre>";
+
 
 ?>
 
