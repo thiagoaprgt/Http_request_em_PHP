@@ -4,6 +4,8 @@
  
  #Exemplo como monitorar o cabeçalho HTTP que foi enviado:
  
+ Código do arquivo que enviará os dados para API
+ 
 ```
 
  <?php
@@ -44,6 +46,33 @@
             echo "<br>----- http header ------ <br><br><br>";
 
     echo $result["output"];
+
+?>
+
+```
+
+# Código da API usada no código acima:
+
+```
+
+<?php
+
+
+    if(!empty($_POST)) {
+
+        $nome = [
+            "nome" => $_POST["nome"],
+            "esporte" => $_POST["esporte"]
+        ];
+
+        $nome = json_encode($nome, JSON_UNESCAPED_UNICODE);
+
+        echo $nome;   
+        
+
+    }
+
+
 
 ?>
 
