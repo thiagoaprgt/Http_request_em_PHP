@@ -32,7 +32,8 @@
                 echo "header está vazio <br><br>";
             }
 
-            $result = curl_exec($ch);     // executa e retorna uma reposta   
+            $result["curlHandle"] = $ch; // retorna o objeto curl para ser usado no monitoramento do cabeçalho HTTP enviado, para isso basta usar a função curl_getinfo()
+            $result["output"] = curl_exec($ch);  // executa e retorna uma reposta            
             
             curl_close($ch); 
             
@@ -68,7 +69,8 @@
                echo "Verbo post: header está vazio";
             }
         
-            $result = curl_exec($ch);     // executa e retorna uma reposta
+            $result["curlHandle"] = $ch; // retorna o objeto curl para ser usado no monitoramento do cabeçalho HTTP enviado, para isso basta usar a função curl_getinfo()
+            $result["output"] = curl_exec($ch);  // executa e retorna uma reposta
         
             curl_close($ch);
             
